@@ -12,7 +12,11 @@ const extension: JupyterLabPlugin<void> = {
   id: 'jupyterlab-countdown',
   autoStart: true,
   activate: (app: JupyterLab) => {
+    console.log('hello JupyterLab!');
     console.log('JupyterLab extension jupyterlab-countdown is activated!');
+    setInterval(() => {
+        console.log('time:',new Date())
+      }, 1000)
   }
 };
 
